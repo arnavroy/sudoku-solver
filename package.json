@@ -10,6 +10,9 @@
     "mocha": "",
     "should": ""
   },
+  "dependencies": {
+    "underscore": ">=1.4.4"
+  },
   "scripts": {
     "test": "mocha test/*.js"
   },
