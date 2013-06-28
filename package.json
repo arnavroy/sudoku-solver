@@ -11,6 +11,7 @@
     "should": ""
   },
   "dependencies": {
+    "browserify": "2.22.0",
     "underscore": ">=1.4.4"
   },
   "scripts": {

@@ -1,5 +1,5 @@
 var should = require('should');
-var sudoku = require('../lib/main').sudoku;
+var sudoku = require('../lib/main');
 
 describe('solve', function() {
     describe('with empty grid', function() {
