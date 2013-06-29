@@ -50,11 +50,20 @@ describe('solve', function() {
 
   describe('with invalid grid', function() {
     it('returns false', function() {
+      // Insufficient slots.
       var result = sudoku.solve('..');
       result.should.not.be.ok;
 
+      // 0 is invalid.
       var randomGridWithZero = '80...24..72......9..4.........1.7..23.5...' +
                                '9...4...........8..7..17..........36.4.';
+      result = sudoku.solve(randomGridWithZero);
+      result.should.not.be.ok;
+
+      // Same number in a peers is invalid.
+      // Here 2 appears twice in the same row.
+      var randomGridWithSameValuePeers = '82...24..72......9..4.........1.7' +
+        '..23.5...9...4...........8..7..17..........36.4.';
       result = sudoku.solve(randomGridWithZero);
       result.should.not.be.ok;
     });
